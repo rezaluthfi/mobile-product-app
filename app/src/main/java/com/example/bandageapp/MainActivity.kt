@@ -12,6 +12,7 @@ import com.example.bandageapp.databinding.ActivityMainBinding
 import com.example.bandageapp.fragment.AboutFragment
 import com.example.bandageapp.fragment.BlogFragment
 import com.example.bandageapp.fragment.ContactFragment
+import com.example.bandageapp.fragment.DetailProductFragment
 import com.example.bandageapp.fragment.HomeFragment
 import com.example.bandageapp.fragment.LoginRegisterFragment
 import com.example.bandageapp.fragment.PagesFragment
@@ -97,20 +98,23 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreateOptionsMenu(menu: android.view.Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar_menu, menu)
 
-        // Configure SearchView
         val searchItem = menu?.findItem(R.id.action_search)
         val searchView = searchItem?.actionView as SearchView
-
         searchView.queryHint = "Search..."
+
+        // Add listener to SearchView
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
-                // Action when search is submitted
-                Toast.makeText(this@MainActivity, "Searching for: $query", Toast.LENGTH_SHORT).show()
                 return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                // Action when search text changes (optional)
+                // Check current fragment
+                val currentFragment = supportFragmentManager.findFragmentById(R.id.container)
+                if (currentFragment is HomeFragment) {
+                    // Call filterProducts function in HomeFragment
+                    currentFragment.filterProducts(newText.orEmpty())
+                }
                 return true
             }
         })

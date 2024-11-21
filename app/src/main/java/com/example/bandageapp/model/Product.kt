@@ -17,6 +17,3 @@ data class ProductDetails(
     val description: String? = null,
     val colors: List<String>? = null
 ) : Serializable
-
-
-
