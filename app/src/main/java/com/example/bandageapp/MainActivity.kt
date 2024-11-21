@@ -129,7 +129,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 return true
             }
             R.id.action_favorite -> {
-                Toast.makeText(this, "Settings clicked", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Favorite clicked", Toast.LENGTH_SHORT).show()
                 return true
             }
         }
