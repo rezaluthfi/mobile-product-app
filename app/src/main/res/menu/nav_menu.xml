@@ -26,7 +26,7 @@
         android:title="Account" >
         <menu>
             <item
-                android:id="@+id/nav_login"
+                android:id="@+id/nav_login_register"
                 android:icon="@drawable/icon_profile_blue"
                 android:title="Login / Register" />
         </menu>

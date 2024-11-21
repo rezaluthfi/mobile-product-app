@@ -9,7 +9,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.example.bandageapp.databinding.ActivityMainBinding
+import com.example.bandageapp.fragment.AboutFragment
+import com.example.bandageapp.fragment.BlogFragment
+import com.example.bandageapp.fragment.ContactFragment
 import com.example.bandageapp.fragment.HomeFragment
+import com.example.bandageapp.fragment.LoginRegisterFragment
+import com.example.bandageapp.fragment.PagesFragment
 import com.example.bandageapp.fragment.ShopFragment
 import com.google.android.material.navigation.NavigationView
 
@@ -62,6 +67,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val fragment: Fragment = when (item.itemId) {
             R.id.nav_home -> HomeFragment()
             R.id.nav_shop -> ShopFragment()
+            R.id.nav_about -> AboutFragment()
+            R.id.nav_blog -> BlogFragment()
+            R.id.nav_contact -> ContactFragment()
+            R.id.nav_pages -> PagesFragment()
+            R.id.nav_login_register -> LoginRegisterFragment()
             else -> HomeFragment()
         }
 
