@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#252B42</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_bg">#FAFAFA</color>
+    <color name="grey">#737373</color>
+    <color name="light_grey">#BDBDBD</color>
+    <color name="blue">#23A6F0</color>
+    <color name="dark_blue">#1565C0</color>
+    <color name="green">#23856D</color>
+    <color name="line_color">#ECECEC</color>
+    <color name="description_color">#858585</color>
+    <color name="btn_oval_stroke_color">#E8E8E8</color>
+</resources>
